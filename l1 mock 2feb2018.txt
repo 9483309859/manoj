@@ -1,0 +1,3326 @@
+
+
+Q1) 
+
+When are the activities like knowledge transfer, end user training , project signoff carried out ?
+
+
+Single Choice - Select one correct answer from the options list. 
+         
+a)After unit testing
+@@@b)After acceptance testing
+c)After system testing
+d)Before system testing
+
+
+Q2
+? ? 
+
+Elicitation process is carried under which phase of SDLC model?
+
+Single Choice - Select one correct answer from the options list. 
+
+a)Feasibility
+b)Design
+@@@c)Requirements
+d)Coding
+ 
+Q3
+
+Which of the given is an example of non configuration item ?
+Single Choice - Select one correct answer from the options list. 
+
+@@@a)Design document
+b)Project plan
+c)Weekly status Reports
+d)Test case
+ 
+
+Q4
+
+Which collection class allows you to grow or shrink its size and provides indexed access to its elements, 
+but doesn't guarantee for duplicates?
+
+Single Choice - Select one correct answer from the options list. 
+
+
+a)HashSet
+b)LinkedHashSet
+@@@c)ArrayList
+d)None of the above
+
+Q5
+What is true about the variable argument list?
+Single Choice - Select one correct answer from the options list. 
+         
+a)Can take from 0 to n arguments
+b)Ellipsis can be used any no of time in the parameter list
+c)Ellipsis must be placed at the beginning of the parameter list
+@@@d)All of the above
+ 
+Q6
+Pick up the true statements:
+
+1. final variable must be initialized. If not it will show the compilation error
+2. private variables must be initialized. If not it will show the compilation error
+
+Single Choice - Select one correct answer from the options list. 
+         
+@@@@a)1) is the true statement
+b)2) is the true statement
+c)Both are true 
+d)None of the statements are true
+
+Q7
+Can data flow through a given IO stream in both directions?
+Single Choice - Select one correct answer from the options list. 
+         
+a)No; streams only work for output
+@@@b)No; a stream has one direction only, input or output
+c)Yes; only one stream is needed to read and write a file.
+d)None of the above
+ 
+
+
+      
+  
+
+
+Q8
+What will be the output of the following code fragment?
+
+ HashMap map = new HashMap();
+   map.put("obj1", null);
+   map.put("obj2", null);
+   map.put(null, null);
+   map.put("obj3", "obj3");
+   System.out.println(map.size());
+
+ Single Choice - Select one correct answer from the options list. 
+
+a)3
+b)1
+@@@c)4
+d)2
+ 
+Q9
+What is the result of attempting to compile and run the following code?
+
+ class Ex {
+  public static void main(String[] args)  {
+   Fx f=new Fx();
+  }
+  Ex(int i) {  
+  }
+ }
+ class Fx extends Ex{ 
+ }
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+a)The code does not compile because the Ex class does not define a no argument constructor.
+b)The code does not compile because the Fx class does not define a no argument constructor.
+c)The code does not compile because there is no code in the Ex(int i) constructor.
+d)The code will compile correctly.
+ 
+Q10
+Consider the below code snippet.
+
+ abstract class Test{
+ . . . . . .
+ }
+
+ Which of the following code are possible?
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Test test = new Test();
+
+ 
+ ? 
+
+
+Class Test2 extends Test{
+ }
+
+ 
+ ? 
+
+
+Both are possible
+
+ 
+ ? 
+
+
+Both are not possible
+ 
+
+
+      
+  
+
+
+Q11
+? ? 
+
+Which of the following options are TRUE about static implementation ?
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+static modifier can be declared with variables and methods.
+
+ 
+ ? 
+
+
+we can use only static variables inside the static method.
+
+ 
+ ? 
+
+
+instance methods cannot use static variable.
+
+ 
+ ? 
+
+
+static variables can be declared inside a method.
+ 
+
+
+      
+  
+
+
+Q12
+? ? 
+
+Which of the following are true?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+The Set interface is designed to ensure that implementing classes have unique members
+
+ 
+ ? 
+
+
+Classes that implement the List interface can not contain duplicate elements
+
+ 
+ ? 
+
+
+The Set interface is designed for storing records returned from a database query
+
+ 
+ ? 
+
+
+Collections is an interface
+ 
+
+
+      
+  
+
+
+Q13
+? ? 
+
+public class CheckFlow {
+ public static void main(String[] args) {
+ System.out.print("1");
+ try {
+ System.out.print("2");
+ } catch (Exception e) {
+ System.out.print("3");
+ return;
+ } finally {
+ System.out.print("4");
+ }
+ System.out.print("5");
+ }
+ }
+
+ What will be the output of above code?           
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+12345
+
+ 
+ ? 
+
+
+1245
+
+ 
+ ? 
+
+
+125
+
+ 
+ ? 
+
+
+1235
+
+ 
+ ? 
+
+
+Compilation Error
+ 
+
+
+      
+  
+
+
+Q14
+? ? 
+
+public static void main(String[] args){
+   TreeMap tree = new TreeMap();
+   tree.put("India", 1);
+   tree.put("China", 2);
+   tree.put("Nepal", 3);
+   tree.put("Bhutan", 4);
+   System.out.println(tree);
+  }
+
+ What is the output of above code?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+{India=1, China=2, , Nepal=3, Bhutan=4}
+
+ 
+ ? 
+
+
+{Bhutan=4, China=2, India=1, Nepal=3}
+
+ 
+ ? 
+
+
+Compilation Error because of not using generics
+
+ 
+ ? 
+
+
+RuntimeException because of not using generics
+ 
+
+
+      
+  
+
+
+Q15
+? ? 
+
+Consider the following scenario.
+
+ A Programmer wants to read data from an array. Assume the length of an array is 8 and also data exists in an array. 
+ But the programmer had written code to read data from 9th index position of an array.
+
+ What is true about the above scenario?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+This will throw checked exception
+
+ 
+ ? 
+
+
+This will throw unchecked exception
+
+ 
+ ? 
+
+
+This will not have any exception
+
+ 
+ ? 
+
+
+This will throw checked exception some time and unchecked exception some time which is not predictable
+ 
+
+
+      
+  
+
+
+Q16
+? ? 
+
+Pick up the true statements:
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+All instances of Enums are serializable by default
+
+ 
+ ? 
+
+
+Abstract classes cannot be instantiated
+
+ 
+ ? 
+
+
+Interfaces can be instantiated
+
+ 
+ ? 
+
+
+Final class cannot be instantiated
+ 
+
+
+      
+  
+
+
+Q17
+? ? 
+
+Consider the given stream operation: 
+
+ List<String> names = students.stream()
+                             .map(Student::getName)
+                             .filter(name->name.startsWith("A"))
+                             .limit(10)
+                             .collect(Collectors.toList());
+
+ If "students" is the collection provided with name as an attribute, which of the following option 
+ correctly describes purpose of the above operation?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+The operation selects  names of all those students where their name starts with "A"
+
+ 
+ ? 
+
+
+The operation selects names of students having length of name 10 characters long and starts with letter "A"
+
+ 
+ ? 
+
+
+The operation selects intial 10 students names and filter out if it starts with "A"
+
+ 
+ ? 
+
+
+The operation filter out students names which starts with "A" and select only initial 10 from filtered result
+ 
+
+
+      
+  
+
+
+Q18
+? ? 
+
+Which is the superclass of all exceptions?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Exception
+
+ 
+ ? 
+
+
+RuntimeException
+
+ 
+ ? 
+
+
+Throwable
+
+ 
+ ? 
+
+
+Error
+ 
+
+
+       
+ 
+  
+
+
+Q19
+? ? 
+
+Identify the Defect Category for the below mentioned scenario:
+
+ Shop cart online shopping application was developed by a set of developers. Using this application, the
+ user can buy various categories of products. User can access this application by visiting the following
+ URL "http://www.shopcartonline.co.in".
+ This application only allows registered users to buy the product. While registering the
+ User should provide the User Name containing at least 4 characters and Password of length 7.
+
+ But during the time of registration, the username field is accepting even 2 digit username.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Coding
+
+ 
+ ? 
+
+
+Query 
+
+ 
+ ? 
+
+
+Design
+
+ 
+ ? 
+
+
+Enhancement
+ 
+
+
+      
+  
+
+
+Q20
+? ? 
+
+Consider the following scenario:
+
+ Your company started a project for developing an "Online Toy Shop". The estimated total duration of the project was 13 months. 
+ Because of some technical reasons your company had to stop the project in between till the issues are not resolved. 
+ After a gap of 6 months the project has reinitiated. Now when the project has restarted, the testing team also started with
+ testing the application and also detected few defects. According to you what should be the error reported date in this scenario?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+The defect reported date should be the project start date
+
+ 
+ ? 
+
+
+The defect reported date should be the current date when the defect is reported in the defect tracking system
+
+ 
+ ? 
+
+
+The defect reported date should be the one when defect was detected by the tester
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q21
+? ? 
+
+Match the following :
+
+ 1) Defect Summery
+ 2) Severity
+ 3) Priority
+ 4) Fixed By
+ 5) Reported By
+
+ A) Impact of the defect on the functionality of the application
+ B) Short description of defect
+ C) Name of the developer
+ D) Indicates when the bug should be fixed
+ E) Name of the Tester
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+1-E, 2-D, 3-C, 4-A, 5-B
+
+ 
+ ? 
+
+
+1-D, 2-A, 3-C, 4-E, 5-B
+
+ 
+ ? 
+
+
+1-B, 2-A, 3-D, 4-C, 5-E
+
+ 
+ ? 
+
+
+1-B, 2-D, 3-C, 4-A, 5-E
+ 
+
+
+      
+  
+
+
+Q22
+? ? 
+
+Consider the following scenario :
+
+ Ashok is testing a particular functionality from Airline Reservation System and he is not sure if the system should 
+ behave in a particular way i.e. he is unclear about the behavior and it seems to be defect but he is not sure. 
+ It looks like to be an ambiguity. What should Ashok  do?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Ashok should report the ambiguity along with other defects
+
+ 
+ ? 
+
+
+Ashok should try to fix the defect
+
+ 
+ ? 
+
+
+Ashok should not report this along with defect
+
+ 
+ ? 
+
+
+Ashok should communicate this to client directly.
+ 
+
+
+       
+ 
+  
+
+
+Q23
+? ? 
+
+Consider the following scenario:
+
+ Imagine a Use Case for an ATM machine with the following functions and actors in the system:
+
+ Functions:
+ 1. Withdraw cash
+ 2. Transfer Funds
+ 3. Validate user
+ 4. Refill Machine
+
+ Actors:
+ 1. Bank Customer
+ 3. Maintenance Person
+
+ List the Alternate flows with exception or error for "Transfer Funds" function by referring to the above scenario?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+A1 Wrong PIN
+ A2 No money
+ A3 From account does not exists
+ A4 To account does not exists
+ A5 No confirmation
+ A6 Card stuck
+ A7 Out of paper
+
+ 
+ ? 
+
+
+A1 Wrong PIN
+ A2 Insert card
+ A3 From account does not exists
+ A4 To account does not exists
+ A5 Receive confirmation
+ A6 Card stuck
+ A7 Out of paper
+
+ 
+ ? 
+
+
+A1 Wrong PIN
+ A2 No money
+ A3 Select from account
+ A4 Select to account
+ A5 No confirmation
+ A6 Card stuck
+ A7 Out of paper
+
+ 
+ ? 
+
+
+A1 Insert card
+ A2 No money
+ A3 From account does not exists
+ A4 To account does not exists
+ A5 No confirmation
+ A6 Card stuck
+ A7 Out of paper
+ 
+
+
+      
+  
+
+
+Q24
+? ? 
+
+Identify the Actor from the following scenario:
+
+ Consider the "Pre School Application". This application will be used by the Principle, Children's parents and faculties. 
+ Parents can submit the feedback about the preschool online using this application. As per the client requirement the 
+ application should be viewed in Hindi and Marathi language also.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Principle,Parent,Faculty
+
+ 
+ ? 
+
+
+Childern,Faculty
+
+ 
+ ? 
+
+
+Principle,Faculty
+
+ 
+ ? 
+
+
+Faculty,School
+ 
+
+
+       
+ 
+  
+
+
+Q25
+? ? 
+
+Fill in the blank:
+
+ The requirements which change due to change in the environment in which the organization is operating 
+ is called as ______________ .
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Mutable Requirements
+
+ 
+ ? 
+
+
+Consequential Requirements
+
+ 
+ ? 
+
+
+Emergent Requirements
+
+ 
+ ? 
+
+
+Compatibility Requirements
+ 
+
+
+      
+  
+
+
+Q26
+? ? 
+
+State whether TRUE or FALSE:
+  
+ "The error found in Design phase of software Lifecycle is less expensive than the error found in 
+ the maintenance phase of Software Lifecycle."
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+True
+
+ 
+ ? 
+
+
+False
+ 
+
+
+      
+  
+
+
+Q27
+? ? 
+
+Consider the following scenario:
+
+ An Employee registration form is developed by the engineers for registering the employee details. 
+ This form contains the field  "Martial Status" ,which  should contain only one of the two values such as 
+ "SINGLE" or "MARRIED".
+
+ Examine whether this Martial Status field is a Testable item or a Non Testable item?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Martial Status field is a testable item
+
+ 
+ ? 
+
+
+Martial Status field is a non testable item
+
+ 
+ ? 
+
+
+Martial Status field neither comes under non testable item or testable item
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q28
+? ? 
+
+Consider the following scenario:
+
+ The system shall have a menu subsystem for user access to functions. The user shall not be required to press more than 
+ one key in selecting a menu item. 
+
+ Identify the category of the requirement of given scenario.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+User interface requirement
+
+ 
+ ? 
+
+
+Security requirement
+
+ 
+ ? 
+
+
+Implicit requirement
+
+ 
+ ? 
+
+
+Invocation Requirement
+ 
+
+
+      
+  
+
+
+Q29
+? ? 
+
+Consider the following Scenario:
+
+ Adam is paying his Electric bill through PAYATM. 
+
+ Identify the type of requirement in the above scenario.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+User Requirement
+
+ 
+ ? 
+
+
+Interface Requirement
+
+ 
+ ? 
+
+
+Constraint
+
+ 
+ ? 
+
+
+Informational Requirement
+ 
+
+
+       
+ 
+  
+
+
+Q30
+? ? 
+
+Analyze the below given class diagram and identify the relationship represented between these two classes.
+
+
+  
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Aggregation
+
+ 
+ ? 
+
+
+Composition
+
+ 
+ ? 
+
+
+Generalization
+
+ 
+ ? 
+
+
+Realization
+ 
+
+
+      
+  
+
+
+Q31
+? ? 
+
+Which access modifier ensures encapsulation of data?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+public
+
+ 
+ ? 
+
+
+protected
+
+ 
+ ? 
+
+
+private
+
+ 
+ ? 
+
+
+protected internal
+ 
+
+
+       
+ 
+  
+
+
+Q32
+? ? 
+
+What are the potential benefits from using tools in general to support testing?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Greater quality in testing functionality and finding more bugs, reduction of tests run 
+
+ 
+ ? 
+
+
+Greater quality of code, reduction in the number of testers needed
+
+ 
+ ? 
+
+
+Greater quality of code, reduction in paperwork, requires a higher skill level of team members 
+
+ 
+ ? 
+
+
+Greater repeatability of tests, reduction in repetitive work, objective assessment.
+ 
+
+
+      
+  
+
+
+Q33
+? ? 
+
+Consider the following scenario:
+
+ Test Manager has decided to use GUI automation tool for testing GUI of their project. 
+ The GUI is expected to change frequently. Test Manger has put some of the manual testers through 
+ 2 days training program on how to use the tool. 
+
+ Which of the following statements are likely to be true?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Automation is likely to fail because of using GUI automation tool
+
+ 
+ ? 
+
+
+Automation is likely to fail because GUI cannot be automated
+
+ 
+ ? 
+
+
+Automation is likely to fail because more number days should be given to manual tester to explore the tool
+
+ 
+ ? 
+
+
+Automation is likely to fail because of lack of experience and frequent changes
+ 
+
+
+      
+  
+
+
+Q34
+? ? 
+
+Using which of the testing process, we can check whether we are developing the right product according 
+ to the customer requirements are not?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Validation
+
+ 
+ ? 
+
+
+Verification
+
+ 
+ ? 
+
+
+Quality Assurance
+
+ 
+ ? 
+
+
+Quality Control
+ 
+
+
+      
+  
+
+
+Q35
+? ? 
+
+Which of the following techniques can be used to discover dead codes, infinite loops, uninitialized 
+ and unused variables, standard violations?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+System Testing
+
+ 
+ ? 
+
+
+Unit Testing
+
+ 
+ ? 
+
+
+Static Testing
+
+ 
+ ? 
+
+
+Integration Testing
+ 
+
+
+      
+  
+
+
+Q36
+? ? 
+
+Consider the following scenario:
+
+ You are testing a "Online Shobuz Shopping Application " This application will be used by the customers 
+ to buy the different category of  cosmetics products. Once customer clicks on any product to view the details, 
+ customer founds that it takes 5 minutes to view the product details.
+
+ As per your opinion which type of testing required to identify such kind of defect?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Configuration Testing
+
+
+ 
+ ? 
+
+
+Stress testing 
+
+ 
+ ? 
+
+
+Volume testing
+
+ 
+ ? 
+
+
+Performance testing
+
+ 
+ ? 
+
+
+Functional testing
+ 
+
+
+      
+  
+
+
+Q37
+? ? 
+
+Consider the following scenario:
+
+ "In Selenium certification examination a candidate has to score minimum of 25 marks in order to clear the exam. 
+ The maximum that he can score is 50 marks."
+
+ Identify the Valid Equivalence values if the candidate clears the certification exam.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+30, 31, 32
+
+ 
+ ? 
+
+
+0, 30, 40
+
+ 
+ ? 
+
+
+22, 49, 50
+
+ 
+ ? 
+
+
+23, 24, 26
+ 
+
+
+      
+  
+
+
+Q38
+? ? 
+
+Match the following:
+
+ A. Test Suite
+ B. Test Cycle
+ C. Test Scenario 
+
+ 1. A set of test cases that ensure that the business process flows are tested from end to end.
+ 2. A set of individual test cases/scenarios that are executed as a package.
+ 3. This consists of a series of test suites.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+A-3, B-2, C-1
+
+ 
+ ? 
+
+
+A-2, B-3, C-1
+
+ 
+ ? 
+
+
+A-1, B-3, C-2
+
+ 
+ ? 
+
+
+A-3, B-1, C-2
+ 
+
+
+       
+ 
+  
+
+
+Q39
+? ? 
+
+Examine the structure of dept table:
+
+
+
+ A developer had created department_master table with the similar structure of dept table using the below query:
+
+ CREATE TABLE department_master AS SELECT * FROM dept WHERE 1=2;
+
+ Identify the query to copy all records from dept table and insert the same into department_master table.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+INSERT INTO department_master SELECT * FROM dept;
+
+ 
+ ? 
+
+
+INSERT INTO department_master VALUES SELECT * FROM dept;
+
+ 
+ ? 
+
+
+INSERT INTO department_master VALUES AS SELECT * FROM dept;
+
+ 
+ ? 
+
+
+Copying of records from one table and inserting to another table is impossible.
+ 
+
+
+      
+  
+
+
+Q40
+? ? 
+
+In a table if foreign key is applied with "ON DELETE CASCADE" clause, then which of the following option is true?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+It represents that when a row in the parent table is deleted, dependent rows in the child table 
+ will not be deleted.
+
+ 
+ ? 
+
+
+No such clause applied to foreign key
+
+ 
+ ? 
+
+
+It represents that when a row in the parent table is deleted, dependent rows in the child table 
+ will be updated.
+
+ 
+ ? 
+
+
+It represents that when a row in the parent table is deleted, dependent rows in the child table 
+ will also be deleted.
+ 
+
+
+      
+  
+
+
+Q41
+? ? 
+
+Which of the following is true about the result of a sub-query?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+The result of a sub-query is used by the main query. 
+
+ 
+ ? 
+
+
+The result of a sub-query is always NULL
+
+ 
+ ? 
+
+
+The result of a sub-query doesn't give a result, it is just helpful in speeding up the main query execution
+
+ 
+ ? 
+
+
+The result of a sub-query is generally ignored when executed.
+ 
+
+
+      
+  
+
+
+Q42
+? ? 
+
+Which join condition can be specified using ON clause?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Explicit Join
+
+ 
+ ? 
+
+
+Implicit Join
+
+ 
+ ? 
+
+
+Product Join
+
+ 
+ ? 
+
+
+Cross Join
+ 
+
+
+      
+  
+
+
+Q43
+? ? 
+
+Examine the content of EMPLOYEE table:
+
+
+
+ Identify the query to display hiredate and number of employees joined in that date in a given department number. 
+ Also order the details based on hiredate. 
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee GROUP BY hiredate ORDER BY 1
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee WHERE deptno=20 GROUP BY hiredate ORDER BY 1;
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee WHERE deptno=20 GROUP BY hiredate ORDER BY 0;
+
+ 
+ ? 
+
+
+SELECT hiredate,COUNT(*) FROM employee GROUP BY hiredate ORDER BY 1 WHERE deptno=20;
+ 
+
+
+       
+ 
+  
+
+
+Q44
+? ? 
+
+Analyze the below given HTML code and identify how many radio buttons are allowed to be selected?
+
+ <input type="radio" name="r" value="Business"/>Business
+   <input type="radio" name="g" value="Employee - Private 
+
+ Sector"/>Employee - Private Sector
+   <input type="radio" name="b" value="Employee - Public 
+
+ Sector"/>Employee - Public Sector
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+0
+
+ 
+ ? 
+
+
+1
+
+ 
+ ? 
+
+
+2
+
+ 
+ ? 
+
+
+3
+ 
+
+
+      
+  
+
+
+Q45
+? ? 
+
+What will be the output of the below code?
+
+ <!DOCTYPE html>
+ <html>
+ <script>
+  function fun1(){
+   frm1.elements[0].value="India";
+  }
+ </script>
+ <body onload="fun1()">
+  <form name="frm1">
+   <input type="hidden" name="country"/>
+   <input type="Submit" value="Go"/>
+  </form>
+ </body>
+ </html>
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+It will display only a button with "Go" caption
+
+ 
+ ? 
+
+
+It will display a text box and a button with "Go" caption
+
+ 
+ ? 
+
+
+Dubug error in javascript Code
+
+ 
+ ? 
+
+
+Value 'India' will be not set to the element with name 'country' as JavaScript code is having error
+ 
+
+
+      
+  
+
+
+Q46
+? ? 
+
+<xs:element name="book">
+   <xs:complexType>
+     <xs:all>
+       <xs:element name="author" type="xs:string"/>
+       <xs:element name="price" type="xs:integer"/>
+     </xs:all>
+   </xs:complexType>
+ </xs:element>
+
+ Which of the given statement is true about the above schema ?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Child elements author and price may occur 0 or more times in XML document
+
+ 
+ ? 
+
+
+Child elements author and price will occur in same order in XML document
+
+ 
+ ? 
+
+
+Child elements author and price will occur only once and in any order in XML document
+
+ 
+ ? 
+
+
+Child elements author and price will occur only once and in given order in XML document
+ 
+
+
+      
+  
+
+
+Q47
+? ? 
+
+What happens if moveTo(x,y) method is called on window object in JavaScript ? 
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Current window will be move to the coordinate specified by x and y.
+
+ 
+ ? 
+
+
+Current window will be move by x and y value.
+
+ 
+ ? 
+
+
+Moves window to a new frame.
+
+ 
+ ? 
+
+
+Window will disappear in background.
+ 
+
+
+      
+  
+
+
+Q48
+? ? 
+
+1.<?xml version="1.0" encoding="UTF-8"?>
+ 2. <library>
+ 3.  <books>
+ 4.   <book category=Technical>
+ 5.    <name>Head First J2SE</name>
+ 6.    <pages>600</pages>
+ 7.    <price>700</price>
+ 8.  </book>
+ 9. </books>
+ 10.</library>
+
+ Which change will make above given XML as well formed XML?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Remove line no.1 
+
+ 
+ ? 
+
+
+category value should be in quotes
+
+ 
+ ? 
+
+
+element values should be in quotes
+
+ 
+ ? 
+
+
+both category and element values need to be in quotes
+ 
+
+
+      
+  
+
+
+Q49
+? ? 
+
+Choose the correct style example of ID selector?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+p {
+     text-align: center;
+     color: red;
+ }
+
+ 
+ ? 
+
+
+#para1 {
+     text-align: center;
+     color: red;
+ }
+
+ 
+ ? 
+
+
+.center {
+     text-align: center;
+     color: red;
+ }
+
+ 
+ ? 
+
+
+h1, h2, p {
+     text-align: center;
+     color: red;
+ }
+ 
+
+
+       
+ 
+  
+
+
+Q50
+? ? 
+
+Which of the following statement is not correct?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Debugging is to find and correct the cause of the software error.
+
+ 
+ ? 
+
+
+Debugging can be performed on code or on requirements and specifications.
+
+ 
+ ? 
+
+
+Debugging combines a systematic search with an intuitive feel for the nature of the program.
+
+ 
+ ? 
+
+
+Debugging is one of the testing techniques.
+ 
+
+
+      
+  
+
+
+Q51
+? ? 
+
+Which of the following are correct guidelines for creating exception handlers?
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+No need to analyze the consequences of failures but need to  find out correct probability.
+
+ 
+ ? 
+
+
+No need to document the reason for the exception
+
+ 
+ ? 
+
+
+Catch the exception in the appropriate parent module
+
+ 
+ ? 
+
+
+Raise the exception whenever the condition arises in the sub module
+ 
+
+
+      
+  
+
+
+Q52
+? ? 
+
+Identify the pseudocode which exhibits robustness?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+SUB  shape(sides)
+  IF (sides >0 and sides <3) THEN
+      PRINT "No proper mathematical shape "
+  ELSE IF (sides > =3 and sides < 4) THEN
+      PRINT "It Can be a Triangle"
+  ELSE IF (sides >= 4 and sides<5) THEN
+      PRINT "It can be a Square"
+  ELSE
+      PRINT "It can be a Polygon"
+  END IF
+ END
+
+ 
+ ? 
+
+
+SUB  shape(sides)
+  IF(sides<=0) THEN
+    PRINT "No shape"
+  IF (sides >0 and sides <3) THEN
+    PRINT "No proper mathematical shape"
+  ELSE IF (sides > =3 and sides < 4) THEN
+    PRINT "It Can be a Triangle"
+  ELSE IF (sides >= 4 and sides<5) THEN
+    PRINT "It can be a Square"
+  END IF
+ END
+
+ 
+ ? 
+
+
+SUB  shape(sides)
+  IF(sides<=0) THEN
+   PRINT "No shape"
+  ELSE IF (sides >0 and sides <3) THEN
+   PRINT "No proper mathematical shape"
+  ELSE IF (sides > =3 and sides < 4) THEN
+   PRINT "It Can be a Triangle"
+  ELSE IF (sides >= 4 and sides<5) THEN
+   PRINT "It can be a Square"
+  ELSE IF
+   PRINT "It can be a Polygon"
+  END IF
+ END
+
+ 
+ ? 
+
+
+SUB  shape(sides)
+  IF(sides<=0) THEN
+   PRINT "No shape"
+  ELSE IF (sides >0 and sides <3) THEN
+   PRINT "No proper mathematical shape"
+  ELSE IF (sides > =3 and sides < 4) THEN
+   PRINT "It Can be a Triangle"
+  ELSE IF (sides >= 4 and sides<5) THEN
+   PRINT "It can be a Square"
+  ELSE IF (sides >= 5 and sides<6) THEN
+   PRINT "It can be a Pentagon"
+  ELSE
+    PRINT "It can be a Polygon"
+  END IF
+ END
+ 
+
+
+       
+ 
+  
+
+
+Q53
+? ? 
+
+What is the full form of QMS?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Quality Management System
+
+ 
+ ? 
+
+
+Quality Manual System
+
+ 
+ ? 
+
+
+Quality Monitoring System
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q54
+? ? 
+
+Non-fulfillment of user's expectations is called as ________.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Issue
+
+ 
+ ? 
+
+
+Defect
+
+ 
+ ? 
+
+
+Product
+
+ 
+ ? 
+
+
+Risk
+ 
+
+
+       
+ 
+  
+
+
+Q55
+? ? 
+
+Which of the  following option will allow you to execute the method only once for all the test cases in the starting?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+@Before 
+ public void before() {System.out.println("in before");}
+
+ 
+ ? 
+
+
+@AfterClass
+ public static void  afterClass() {System.out.println("in after class");}
+
+ 
+ ? 
+
+
+@BeforeClass
+ public static void beforeClass() {System.out.println("in before class");}
+
+ 
+ ? 
+
+
+@After
+ public void after() {System.out.println("in after");}
+ 
+
+
+      
+  
+
+
+Q56
+? ? 
+
+Consider the classes below:
+
+ public class Greeting {
+  public String greet()
+  {
+   return "Welcome to Java";
+  }
+ }
+
+ import org.junit.Test;
+ import static org.junit.Assert.*;
+
+
+ public class GreetingTest {
+ @Test
+ public void testGreet()
+ {
+  Greeting greeting = new Greeting();
+  assertEquals("Unexpected result","Welcome to Java", greeting.greet());
+ }
+ }
+
+ What will be the result when the GreetingTest class is run as a Junit test case?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Compilation error
+
+ 
+ ? 
+
+
+Test will pass
+
+ 
+ ? 
+
+
+Test will fail
+
+ 
+ ? 
+
+
+Test will fail along with the message Unexpected result
+ 
+
+
+      
+  
+
+
+Q57
+? ? 
+
+Consider the following scenario :
+
+ Suresh has created a Test Suit with 10 test cases to test an application out of which there are 3 test cases 
+ that he doesn't want to execute right now, but he  still want these tests to be around.  
+ Which of the following actions will be more appropriate for Suresh?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Amit should apply @AfterClass annotation on those 3 test cases. 
+
+ 
+ ? 
+
+
+Amit should apply @Ignore annotation on those 3 test cases. 
+
+ 
+ ? 
+
+
+Amit should apply @BeforeClass annotation on those 3 test cases
+
+ 
+ ? 
+
+
+Amit should delete those 3 test cases.
+ 
+
+
+       
+ 
+  
+
+
+Q58
+? ? 
+
+Complete the following statement:
+
+ "The Keyword-Driven framework requires the development of _________ and _________.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+data tables and keywords
+
+ 
+ ? 
+
+
+test cases and keywords
+
+ 
+ ? 
+
+
+components and test cases
+
+ 
+ ? 
+
+
+parameters and test cases
+ 
+
+
+      
+  
+
+
+Q59
+? ? 
+
+Consider the following scenario, what would be the equivalent Selenium IDE commands for 
+ the following Selenium Web Driver API Code? 
+
+ driver.findElement(By.name("username")).sendKeys("Sam123");
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Command  Target                          Value
+ type              name=username    Sam123
+
+ 
+ ? 
+
+
+Command  Target                           Value
+ enter            name=username     Sam123
+
+ 
+ ? 
+
+
+Command  Target                          Value
+ clear             name=username
+ type              name=username     Sam123
+
+ 
+ ? 
+
+
+Command  Target                       Value
+ input            type=username    Sam123
+ 
+
+
+      
+  
+
+
+Q60
+? ? 
+
+Consider the following HTML code snippet:
+
+ <table> 
+     <tr> 
+        <td>1</td>
+        <td>2</td>
+     </tr> 
+     <tr> 
+        <td>3</td> 
+        <td>4</td> 
+     </tr>
+  </table>
+
+ What will be the output of the following Web Driver API code?
+
+ driver.findElement(By.xpath("//table/tr[1]/td")).getText();
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+The above statement returns 1
+
+ 
+ ? 
+
+
+The above statement returns 3
+
+ 
+ ? 
+
+
+The xpath query is incorrect
+
+ 
+ ? 
+
+
+webdriver statement is incorrect
+ 
+
+
+      
+  
+
+
+Q61
+? ? 
+
+You are testing an Leave application. The user need to click on "Apply Leave" 
+ button on the home page to apply for a leave.
+ Once the user clicks on the above mentioned button, he/she will be navigated to the page where the user 
+ can provide the required leave details to apply for a leave in the system.
+ You need to write the test script code using Selenium Web Driver API in such way that upon execution 
+ the test script should wait for controls to first become visible before executing the next step.
+
+ Consider the above given testing scenario & select the correct Selenium Web Driver API feature to achieve 
+ the said testing requirement.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Using Explicit Wait
+
+ 
+ ? 
+
+
+Using Implicit Wait
+
+ 
+ ? 
+
+
+Using Explicit Wait with Expected Condition
+
+ 
+ ? 
+
+
+Using Implicit Wait with Expected Condition
+ 
+
+
+      
+  
+
+
+Q62
+? ? 
+
+What kind of application is the Selenium IDE?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Windows Application
+
+ 
+ ? 
+
+
+Web Application
+
+ 
+ ? 
+
+
+Firefox add-on
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q63
+? ? 
+
+Consider the following scenario:
+
+ Vijay is new in Selenium IDE. He is exploring selenium IDE by refereeing the articles available online. 
+ At the time of writing one of the script he has faced below issue:
+ He has to enter Mobile number value in Mobile number textbox.As the first step he has to locate the element 
+ using Selenium IDE and then enter the mobile number. He has only aware of three element locators id,name,class.
+ When he has actually tried to locate the element he found id and name along with class name of the element is not 
+ given by HTML designer.
+
+ In above scenario can you suggest Vijay on the selection of an element locator.
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Vijay has to use xpath element locator
+
+ 
+ ? 
+
+
+Vijay has to use DOM - getElementsByName locator
+
+ 
+ ? 
+
+
+He has to use DOM - getElementsById locator
+
+ 
+ ? 
+
+
+Not possible to locate such kind of element if id,name and class name are not given by HTML Designer
+ 
+
+
+      
+  
+
+
+Q64
+? ? 
+
+Consider the below scenario:
+
+ "Suresh was working on online banking application project. While writing one of the script as per 
+ the requirement he has to click on button named btnAlert.Once he clicks on the button alert window opens. 
+ He has to store and print the message from alert window."
+
+ Which line of code would you suggest to Suresh?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+WebDriver driver=new FirefoxDriver();
+   String baseurl="url of AlertExample.html";
+ driver.get(baseurl);
+ WebElement t=driver.findElement(By.name("btnAlert"));
+ t.click();
+ Alert s=driver.switchTo().alert();
+ String alerttext=s.getText();
+ System.out.println("Alert text is:" +alerttext);
+
+ 
+ ? 
+
+
+WebDriver driver=new FirefoxDriver();
+   String baseurl="url of AlertExample.html";
+ driver.get(baseurl);
+ WebElement t=driver.findElement(By.id("btnAlert"));
+ t.click();
+ Alert s=driver.switch().alert();
+ String alerttext=s.getText();
+ System.out.println("Alert text is:" +alerttext);
+
+ 
+ ? 
+
+
+WebDriver driver=new FirefoxDriver();
+   String baseurl="url of AlertExample.html";
+ driver.get(baseurl);
+ WebElement t=driver.findElements(By.name("btnAlert"));
+ Alert s=driver.switchTo().alert();
+ String alerttext=s.getText();
+ System.out.print("Alert text is:" +alerttext);
+
+ 
+ ? 
+
+
+WebDriver driver=new FirefoxDriver();
+   String baseurl="url of AlertExample.html";
+ driver.get(baseurl);
+ WebElement t=driver.findElement("btnAlert");
+ t.click();
+ Alert s=driver.switchTo().alert();
+ String alerttext=s.getText();
+ System.out.println("Alert text is:" +alerttext);
+ 
+
+
+      
+  
+
+
+Q65
+? ? 
+
+Which of the following are the features of Selenium Grid?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Allows you to run your tests on different machines against different browsers in parallel
+
+ 
+ ? 
+
+
+Cross-platform testing is done effectively using grid
+
+ 
+ ? 
+
+
+It is aused to reduce the time taken by the test suite to complete a test pass.
+
+ 
+ ? 
+
+
+Manage multiple environments from a central point, making it easy to run the tests against 
+ a large combination of browsers and operating systems.
+
+ 
+ ? 
+
+
+All of the above
+ 
+
+
+      
+  
+
+
+Q66
+? ? 
+
+Which of the following statements are not applicable for capabilities and Profile setting in webdriver?
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+Desiredcapability can not be used to configure the driver instance of Selenium WebDriver
+
+ 
+ ? 
+
+
+Capabilities describes a series of key/value pairs that encapsulate aspects of a browser
+
+
+ 
+ ? 
+
+
+Profile used to create custom Firefox profile
+
+ 
+ ? 
+
+
+DesiredCapabilities set properties for the WebDriver
+
+
+ 
+ ? 
+
+
+Profile used to create custom data driven automation framework
+ 
+
+
+      
+  
+
+
+Q67
+? ? 
+
+Consider the below given TestNG test case and select the suitable xml configuration to run the TestNG test case:
+
+ import org.testng.annotations.Test;
+ import static org.testng.Assert.assertEquals;
+
+ public class FirstTestNGSimpleTest
+ {
+       @Test
+       public void testMessage()
+       {
+             String str = "Welcome to TestNG";
+             assertEquals("Welcome to TestNG",str);  
+       }
+ }
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+ <suite name="Sample test Suite">
+    <test name="Sample test">
+     <classes>
+       <class name="FirstTestNGSimpleTest" />
+     </classes>
+   </test>
+ </suite>
+
+ 
+ ? 
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+ <suites name="Sample test Suite">
+    <tests name="Sample test">
+     <class>
+       <class name="FirstTestNGSimpleTest" />
+     </class>
+   </test>
+ </suite>
+
+ 
+ ? 
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+ <suite name="Sample test Suite">
+    <test name="FirstTestNGSimpleTest">
+     <classes>
+       <class name="Sample test" />
+     </classes>
+   </test>
+ </suite>
+
+ 
+ ? 
+
+
+None of the above
+ 
+
+
+      
+  
+
+
+Q68
+? ? 
+
+Which of the following is the correct Web Driver code to automate the web application in Google Chrome web browser?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+System.setProperty("webdriver.chrome.driver","path/to/chromedriver.exe");
+ WebDriver driver=new ChromeDriver();
+ driver.get("http://www.google.com/");
+
+ 
+ ? 
+
+
+System.setBrowser("webdriver.chrome.driver","path/to/chromedriver.exe")
+ WebDriver driver=new ChromeDriver();
+ driver.get("http://www.google.com/");
+
+ 
+ ? 
+
+
+WebDriver driver=new ChromeDriver("webdriver.chrome.driver","path/to/chromedriver.exe");
+ driver.get("http://www.google.com/");
+
+ 
+ ? 
+
+
+System.setProperty("path/to/chromedriver.exe","webdriver.chrome.driver");
+ WebDriver driver=new ChromeDriver();
+ driver.get("http://www.google.com/");
+ 
+
+
+      
+  
+
+
+Q69
+? ? 
+
+What are the general steps followed in an automation process?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+1.Test tool selection
+ 2.Test Planning
+ 3.Test Execution
+ 4.Maintenance
+
+ 
+ ? 
+
+
+
+ 1.Define the scope of Automation
+ 2.Planning, Design and Development 
+ 3.Test Execution
+
+
+ 
+ ? 
+
+
+1.Test tool selection
+ 2.Planning, Design and Development 
+ 3.Test Execution
+ 4.Maintenance
+
+ 
+ ? 
+
+
+1.Test tool selection
+ 2.Define the scope of Automation
+ 3.Planning, Design and Development 
+ 4.Test Execution
+ 5.Maintenance
+ 
+
+
+      
+  
+
+
+Q70
+? ? 
+
+Which of the following is/are incorrect Selenium Locator Command?
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+css=tag[attribute=value]
+
+ 
+ ? 
+
+
+css=tag.contains("inner text")
+
+ 
+ ? 
+
+
+document.getElementByName("name")[index]
+
+ 
+ ? 
+
+
+Option 2 & 3
+ 
+
+
+      
+  
+
+
+Q71
+? ? 
+
+Fill in the blank:
+
+ The test suite is made up of ______________ .
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Tests
+
+ 
+ ? 
+
+
+Test pattern
+
+ 
+ ? 
+
+
+Use Cases
+
+ 
+ ? 
+
+
+Script block
+ 
+
+
+      
+  
+
+
+Q72
+? ? 
+
+Which of the following component is NOT part of Selenium suite?
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+Selenium IDE
+
+ 
+ ? 
+
+
+Selenium RC
+
+ 
+ ? 
+
+
+Test NG
+
+ 
+ ? 
+
+
+Selenium Grid
+
+ 
+ ? 
+
+
+Junit
+
+ 
+ ? 
+
+
+Selenium 2
+ 
+
+
+      
+  
+
+
+Q73
+? ? 
+
+Which of the following testings can be performed using Selenium?
+
+ 
+ Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list. 
+        
+ 
+ 
+
+ 
+ ? 
+
+
+Functional Testing
+
+ 
+ ? 
+
+
+Regression Testing
+
+ 
+ ? 
+
+
+Performance Testing
+
+ 
+ ? 
+
+
+Security Testing
+ 
+
+
+      
+  
+
+
+Q74
+? ? 
+
+What is the Output of below TestNG code?
+
+ import org.testng.annotations.Test;
+ import static org.testng.Assert.assertEquals;
+ public class testng 
+ {
+  
+   @Test
+     public void testAdd() {
+        String str = "TestNG is working fine";
+        assertEquals("TestNG is working", str);
+
+ }
+ }
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+TestNG is working fine
+
+ 
+ ? 
+
+
+TestNG is working
+
+ 
+ ? 
+
+
+Passed:testAdd
+
+ 
+ ? 
+
+
+AssertionError: expected [TestNG is working fine] but found [TestNG is working]
+ 
+
+
+      
+  
+
+
+Q75
+? ? 
+
+Which is wrong in below code to verify that the expected text on Sign in button along with its 
+ HTML tag in Selenium IDE?
+
+ open https://www.google.co.in 
+ waitForElementPresent id=gb_70 
+ verifyElementPresent id=gb_70 
+
+ Note:Sign in button id given as id=gb_70
+
+
+ Single Choice - Select one correct answer from the options list. 
+         
+ 
+ 
+
+ 
+ ? 
+
+
+Use verifyText command
+
+ 
+ ? 
+
+
+Use verifyElementPresent command
+
+ 
+ ? 
+
+
+verifyTextPresent
+
+ 
+ ? 
+
+
+Use verifyTable command
