@@ -1,0 +1,403 @@
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
++-------+---------+-----------+------+------------+---------+---------+--------+
+14 rows in set (0.00 sec)
+
+mysql> insert into emp values (8000, 'MONI','ANALYST',7500,'2000-11-23',5000,NULL,30);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
++-------+---------+-----------+------+------------+---------+---------+--------+
+15 rows in set (0.00 sec)
+
+
+mysql> insert into emp (empno,empname,job,hiredate,sal) values (8001,'MANU','MANAGER','2000-4-14',2500);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> update emp set sal=2500,comm=NULL;
+Query OK, 16 rows affected (0.02 sec)
+Rows matched: 16  Changed: 16  Warnings: 0
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+---------+-----------+------+------------+---------+------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 | 2500.00 | NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 2500.00 | NULL |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 2500.00 | NULL |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2500.00 | NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 2500.00 | NULL |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2500.00 | NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2500.00 | NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 2500.00 | NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 2500.00 | NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 2500.00 | NULL |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 2500.00 | NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 | 2500.00 | NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 2500.00 | NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 2500.00 | NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 2500.00 | NULL |     30 |
+|  8001 | MANU    | MANAGER   |    0 | 2000-04-14 | 2500.00 | NULL |   NULL |
++-------+---------+-----------+------+------------+---------+------+--------+
+16 rows in set (0.00 sec)
+
+mysql> rollback
+    -> ;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 3000.00 |    NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 1100.00 |    NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
+|  8001 | MANU    | MANAGER   |    0 | 2000-04-14 | 2500.00 |    NULL |   NULL |
++-------+---------+-----------+------+------------+---------+---------+--------+
+16 rows in set (0.00 sec)
+
+mysql> update emp set sal=2500,comm=NULL where deptno=20;
+Query OK, 5 rows affected (0.08 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> update emp set sal=2500,comm=200.0 where deptno=20;
+Query OK, 5 rows affected (0.00 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 | 2500.00 |  200.00 |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2500.00 |  200.00 |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 2500.00 |  200.00 |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 2500.00 |  200.00 |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 2500.00 |  200.00 |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
+|  8001 | MANU    | MANAGER   |    0 | 2000-04-14 | 2500.00 |    NULL |   NULL |
++-------+---------+-----------+------+------------+---------+---------+--------+
+16 rows in set (0.00 sec)
+
+mysql> update emp set sal=3500,comm=NULL where deptno=20;
+Query OK, 5 rows affected (0.00 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 | 3500.00 |    NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 3500.00 |    NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 3500.00 |    NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 3500.00 |    NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3500.00 |    NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
+|  8001 | MANU    | MANAGER   |    0 | 2000-04-14 | 2500.00 |    NULL |   NULL |
++-------+---------+-----------+------+------------+---------+---------+--------+
+16 rows in set (0.00 sec)
+
+mysql> rollback
+    -> ;
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 | 2500.00 |    NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2500.00 |    NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 2500.00 |    NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 2500.00 |    NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 2500.00 |    NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
+|  8001 | MANU    | MANAGER   |    0 | 2000-04-14 | 2500.00 |    NULL |   NULL |
++-------+---------+-----------+------+------------+---------+---------+--------+
+16 rows in set (0.00 sec)
+
+
+*****************************************************************************************************
+
+
+DELETE COMMAND
+
+{follow the steps as it is , or else data will be permanently lost}
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> delete from emp;
+Query OK, 16 rows affected (0.00 sec)
+
+mysql> select * from emp;
+Empty set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+---------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 | 2500.00 |    NULL |     20 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2500.00 |    NULL |     20 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1987-04-19 | 2500.00 |    NULL |     20 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1987-05-23 | 2500.00 |    NULL |     20 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 2500.00 |    NULL |     20 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI    | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
+|  8001 | MANU    | MANAGER   |    0 | 2000-04-14 | 2500.00 |    NULL |   NULL |
++-------+---------+-----------+------+------------+---------+---------+--------+
+16 rows in set (0.00 sec)
+************************************************************************************************
+TRUNCATE COMMAND
+
+MYSQL>TRUNCATE TABLE TABLENAME;
+
+{FOR PERMANENTLY EDIT THE TABLE}
+*******************************************************************
+
+SAVE POINT
+
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SAVEPOINT INS;
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> insert into emp (empno,empname) values (8003,'monday');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into emp (empno,empname) values (8004,'tuesday');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into emp (empno,empname) values (8005,'wednesday');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> savepoint upd;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> update emp set sal=3000 where empno in (8003,8004,8005);
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> savepoint del;
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> delete from emp where empno=8005;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> rollback to del;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> select * from emp;
++-------+-----------+-----------+------+------------+---------+---------+--------+
+| EMPNO | EMPNAME   | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+-----------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH     | CLERK     | 7902 | 1980-12-17 | 2500.00 |    NULL |     20 |
+|  7499 | ALLEN     | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD      | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES     | MANAGER   | 7839 | 1981-04-02 | 2500.00 |    NULL |     20 |
+|  7654 | MARTIN    | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE     | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK     | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT     | ANALYST   | 7566 | 1987-04-19 | 2500.00 |    NULL |     20 |
+|  7839 | KING      | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER    | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS     | CLERK     | 7788 | 1987-05-23 | 2500.00 |    NULL |     20 |
+|  7900 | JAMES     | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD      | ANALYST   | 7566 | 1981-12-03 | 2500.00 |    NULL |     20 |
+|  7934 | MILLER    | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
+|  8000 | MONI      | ANALYST   | 7500 | 2000-11-23 | 5000.00 |    NULL |     30 |
+|  8001 | MANU      | MANAGER   |    0 | 2000-04-14 | 2500.00 |    NULL |   NULL |
+|  8003 | monday    | NULL      |    0 | NULL       | 3000.00 |    NULL |   NULL |
+|  8004 | tuesday   | NULL      |    0 | NULL       | 3000.00 |    NULL |   NULL |
+|  8005 | wednesday | NULL      |    0 | NULL       | 3000.00 |    NULL |   NULL |
++-------+-----------+-----------+------+------------+---------+---------+--------+
+19 rows in set (0.00 sec)
+
+****************************************************************************************************
+
+INDEX
+
+mysql> create index mgr_idx on emp(mgr);
+Query OK, 19 rows affected (0.24 sec)
+Records: 19  Duplicates: 0  Warnings: 0
+
+
+mysql> select * from emp where mgr=7500;
++-------+---------+---------+------+------------+---------+------+--------+
+| EMPNO | EMPNAME | JOB     | MGR  | HIREDATE   | SAL     | COMM | DEPTNO |
++-------+---------+---------+------+------------+---------+------+--------+
+|  8000 | MONI    | ANALYST | 7500 | 2000-11-23 | 5000.00 | NULL |     30 |
++-------+---------+---------+------+------------+---------+------+--------+
+1 row in set (0.00 sec)
+*****************************************************************************************************
+
+VIEW
+
+
+mysql> create view emp_dept
+    -> as select empno,empname,dname
+    -> from emp e , dept d
+    -> where e.deptno=d.deptno;
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> select * from emp_dept;
++-------+---------+------------+
+| empno | empname | dname      |
++-------+---------+------------+
+|  7782 | CLARK   | ACCOUNTING |
+|  7839 | KING    | ACCOUNTING |
+|  7934 | MILLER  | ACCOUNTING |
+|  7369 | SMITH   | RESEARCH   |
+|  7566 | JONES   | RESEARCH   |
+|  7788 | SCOTT   | RESEARCH   |
+|  7876 | ADAMS   | RESEARCH   |
+|  7902 | FORD    | RESEARCH   |
+|  7499 | ALLEN   | SALES      |
+|  7521 | WARD    | SALES      |
+|  7654 | MARTIN  | SALES      |
+|  7698 | BLAKE   | SALES      |
+|  7844 | TURNER  | SALES      |
+|  7900 | JAMES   | SALES      |
+|  8000 | MONI    | SALES      |
++-------+---------+------------+
+15 rows in set (0.00 sec)
+********************************************************
+
+TO CREATE NEW USERS 
+
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\MONISM>mysql -u root -p
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 7
+Server version: 5.0.41-community-nt MySQL Community Edition (GPL)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY '1234567';
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+
+AFTER CREATING  
+
+
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\MONISM>mysql -u newuser -p
+Enter password: *******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 5.0.41-community-nt MySQL Community Edition (GPL)
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> GRANT select ON database_name.table_name TO 'username'@'localhost'; {to allow permission for select,delet,insert etc}
+mysql> REVOKE select ON database_name.table_name TO 'username'@'localhost'; {to block permission for select,delet,insert etc}

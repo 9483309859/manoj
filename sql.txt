@@ -1,0 +1,272 @@
+CREATE TABLE EMPLOYEE
+(EMPNO int(4) Primary key,
+ENAME varchar(10), 
+JOB varchar(9), 
+MGR int(4),
+HIREDATE date,
+SAL decimal(7,2),
+COMM decimal(7,2),
+DEPTNO int(2)); 
+
+******************************************************************************
+mysql> CREATE TABLE DEPT
+    -> (deptno int(2) primary key,
+    -> dname varchar(14),
+    -> loc varchar(13));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> describe EMPLOYEE
+    -> ;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| ENAME    | varchar(10)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | NULL    |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.06 sec)
+************************************************************************************
+mysql> alter table EMPLOYEE modify MGR int(4) default 0;
+Query OK, 0 rows affected (0.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMPLOYEE
+    -> ;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| ENAME    | varchar(10)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+*******************************************************************************
+mysql> alter table EMPLOYEE modify ENAME varchar(14);
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMPLOYEE;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| ENAME    | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.02 sec)
+***********************************************************************************
+mysql> alter table EMPLOYEE change column ENAME EMPNAME varchar(14);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMPLOYEE;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+***************************************************************************
+
+mysql> rename table EMPLOYEE to EMP;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> describe EMP;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.02 sec)
+************************************************************************
+
+mysql> alter table EMP add CITY varchar(14);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMP;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
+| CITY     | varchar(14)  | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+****************************************************************************************
+mysql> alter table EMP drop column CITY;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMP;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+*********************************************************************************
+
+mysql> alter table EMP add constraint fk_DEPTNO_EMP foreign key (DEPTNO) references DEPT (DEPTNO);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMP;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  | MUL | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+********************************************************************************
+mysql> SHOW CREATE TABLE EMP;
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| EMP   | CREATE TABLE `emp` (
+  `EMPNO` int(4) NOT NULL,
+  `EMPNAME` varchar(14) default NULL,
+  `JOB` varchar(9) default NULL,
+  `MGR` int(4) default '0',
+  `HIREDATE` date default NULL,
+  `SAL` decimal(7,2) default NULL,
+  `COMM` decimal(7,2) default NULL,
+  `DEPTNO` int(2) default NULL,
+  PRIMARY KEY  (`EMPNO`),
+  KEY `fk_DEPTNO_EMP` (`DEPTNO`),
+  CONSTRAINT `fk_DEPTNO_EMP` FOREIGN KEY (`DEPTNO`) REFERENCES `dept` (`deptno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.06 sec)
+******************************************************************************************
+
+mysql> alter table EMP drop foreign key fk_DEPTNO_EMP;
+Query OK, 0 rows affected (0.20 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMP;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+    
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |            {changes wont be effected in the table}
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  | MUL | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> show create table EMP;
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                                                                                                                              |
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| EMP   | CREATE TABLE `emp` (
+  `EMPNO` int(4) NOT NULL,
+  `EMPNAME` varchar(14) default NULL,
+  `JOB` varchar(9) default NULL,
+  `MGR` int(4) default '0',
+  `HIREDATE` date default NULL,
+  `SAL` decimal(7,2) default NULL,
+  `COMM` decimal(7,2) default NULL,
+  `DEPTNO` int(2) default NULL,
+  PRIMARY KEY  (`EMPNO`),
+  KEY `fk_DEPTNO_EMP` (`DEPTNO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+{changes while showing constraints}
+*******************************************************************
+
+mysql> show create table EMP;
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                                                                                                                              |
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| EMP   | CREATE TABLE `emp` (
+  `EMPNO` int(4) NOT NULL,
+  `EMPNAME` varchar(14) default NULL,
+  `JOB` varchar(9) default NULL,
+  `MGR` int(4) default '0',
+  `HIREDATE` date default NULL,
+  `SAL` decimal(7,2) default NULL,
+  `COMM` decimal(7,2) default NULL,
+  `DEPTNO` int(2) default NULL,
+  PRIMARY KEY  (`EMPNO`),
+  KEY `fk_DEPTNO_EMP` (`DEPTNO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> alter table EMP drop index `fk_DEPTNO_EMP`;
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe EMP;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+            {To drop contraints and reflect changes in table}
+| EMPNO    | int(4)       | NO   | PRI |         |       |
+| EMPNAME  | varchar(14)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int(4)       | YES  |     | 0       |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | decimal(7,2) | YES  |     | NULL    |       |
+| COMM     | decimal(7,2) | YES  |     | NULL    |       |
+| DEPTNO   | int(2)       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+***************************************************************************
